@@ -218,17 +218,16 @@
   **************************************** SERVICES**************************************
   ***************************************************************************************/
 
-.services {
-    background-color: var(--color-primary-light);
 
-}
 
-.services .title-services {
+.services .title-services h2{
     padding: 10px;
     font-weight: 400;
     font-size: 50px;
     text-align: center;
     justify-content: center;
+    color: var(--color-secundary-dark);
+    margin: 15px;
 }
 
 .image-section {
@@ -491,6 +490,10 @@
     margin-top: 10px;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.appointment button:hover{
+    background-color: #291d23;
 }
 
 /****************************************************************************************
