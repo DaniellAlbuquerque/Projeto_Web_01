@@ -1,4 +1,16 @@
-alert('Seja Bem vindos') 
+alert('Seja Bem vindos')
+
+function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = "/img/menu_white_36dp.svg";
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = "/img/close_white_36dp.svg";
+    }
+}
+
 function submitForm() {
     var nome = document.getElementById('nome').value;
     var email = document.getElementById('email').value;
@@ -9,10 +21,10 @@ function submitForm() {
         return;
     }
 
-    // Substitua 'seu-endpoint-formspree' pelo endpoint fornecido pelo Formspree
+
     var endpoint = 'https://formspree.io/f/xknldveo';
 
-    // Configurar dados do formulário
+
     var formData = new FormData();
     formData.append('nome', nome);
     formData.append('email', email);
@@ -26,22 +38,22 @@ function submitForm() {
             'Accept': 'application/json'
         }
     })
-    .then(response => response.json())
-    .then(data => {
-        // Verificar a resposta do servidor (pode variar dependendo do serviço)
-        if (data.ok) {
-            alert('Obrigado! Sua mensagem foi enviada com sucesso.');
-            // Limpar os campos após o envio
-            document.getElementById('nome').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('message').value = '';
-        } else {
+        .then(response => response.json())
+        .then(data => {
+
+            if (data.ok) {
+                alert('Obrigado! Sua mensagem foi enviada com sucesso.');
+                // Limpar os campos após o envio
+                document.getElementById('nome').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Houve um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
             alert('Houve um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
-        }
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        alert('Houve um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
-    });
+        });
 }
 
