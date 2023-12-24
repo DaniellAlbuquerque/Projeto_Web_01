@@ -1,4 +1,4 @@
-alert('Seja Bem vindos')
+alert('Seja bem vindo!')
 
 function menuShow() {
     let menuMobile = document.querySelector('.mobile-menu');
