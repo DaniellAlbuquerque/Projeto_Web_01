@@ -134,6 +134,7 @@ body {
 
 .about .container {
     display: flex;
+    justify-content: center;
 }
 
 .about .timing {
@@ -236,10 +237,29 @@ body {
 
 .about .bi-envelope {
     color: var(--color-primary-light);
+    
 }
 
-.about .bi-telephone {
+.about .bi-instagram  {
     color: var(--color-primary-light);
+    margin-left:2px;
+}
+
+.about .bi-facebook {
+    color: var(--color-primary-light);
+    margin-left:2px;
+}
+
+.about .bi-whatsapp {
+    color: var(--color-primary-light);
+    margin-left:2px;
+}
+
+.about .icon-social{
+    display: inline;
+    color: var(--color-primary-light);
+
+
 }
 
 /****************************************************************************************
@@ -583,59 +603,43 @@ body {
     font-size: 12px;
 }
 
+.footer .bi-instagram  {
+    margin-left: 2px;
+}
+.footer .bi-envelope  {
+    margin-left: 2px;
+}
+.footer .bi-facebook {
+    margin-left: 2px;
+}
+.footer .bi-whatsapp {
+    margin-left: 2px;
+}
+
 /*****************************************************************************************
 *************************************** MIDIAS REPONSIVAS**********************************
 *********************************************************************************************/
 
 
-.mobile-menu-icon {
-    display: none;
-}
 
 .mobile-menu {
+    background-color: var(--color-secundary-dark);
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 99999;
     display: none;
+    width: 60%;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 40px 4%    ;
 }
 
-@media screen and (max-width: 730px) {
 
-    .header img {
-        left: 0px;
-    }
 
-    .nav-bar {
-        padding: 1.5rem 4rem;
-    }
 
-    .nav-item {
-        display: none;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-
-    }
-
-    .mobile-menu {
-        background-color: var(--color-secundary-dark);
-    }
-
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-
-    }
-
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 1.2rem;
-    }
-
-    .open {
-        display: block;
-    }
-}
+   
 
 
 @media screen and (max-width: 730px) {
@@ -648,8 +652,21 @@ body {
         width: 100vh;
     }
 
+    .header{
+        display: none;
+    }
+
     .home .banner h1 {
         font-size: 60px;
+    }
+
+    .home .nav ul{
+        display: none;
+    }
+
+    .home .logo {
+        justify-content: center;
+        align-items: center;
     }
 
 
@@ -662,6 +679,7 @@ body {
 
     .about .container {
         flex-direction: column;
+        align-items: center;
 
     }
 
